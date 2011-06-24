@@ -49,7 +49,7 @@ public class FoursquareAuthenticator {
         box.show();
     }
 
-    private static native void registerCallback(AuthenticatorCallback callback) /*-{
+    private static native void registerCallback(AuthenticatorCallback callback)/*-{
     $wnd["_foursquareToken"] = function(token) {
     callback.@com.totsp.peak.client.foursquare.FoursquareAuthenticator.AuthenticatorCallback::onSuccess(Ljava/lang/String;)(token);
     }
