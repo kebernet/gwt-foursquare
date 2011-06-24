@@ -59,7 +59,7 @@ public class Foursquare {
 
     static native void createCallbackMethod(String callbackMethodName, FoursquareCallback callback) /*-{
     $wnd[callbackMethodName] = function( value ){
-    callback.@com.totsp.peak.client.foursquare.FoursquareCallback::onResponse(Lcom/totsp/peak/client/foursquare/Result;)(value);
+    callback.@com.totsp.gwt.foursquare.client.FoursquareCallback::onResponse(Lcom/totsp/gwt/foursquare/client/Result;)(value);
     }
     }-*/;
 
