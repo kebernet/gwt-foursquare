@@ -57,7 +57,11 @@ public class Foursquare {
         this.getCheckins(fromDate, toDate, limit, offset, "self", callback);
     }
 
-    static native void createCallbackMethod(String callbackMethodName, FoursquareCallback callback);
+    static native void createCallbackMethod(String callbackMethodName, FoursquareCallback callback)/*-{
+        $wnd[callbackMethodName] = function( value ){
+            callback.@com.totsp.peak.client.foursquare.FoursquareCallback::onResponse(Lcom/totsp/peak/client/foursquare/Result;)(value);
+        }
+    }-*/;
 
     static void createScriptTag(String url) {
         Element script = DOM.createElement("script");
